@@ -265,7 +265,7 @@ public class SlideUpPanelTests extends AbstractTestClass<MusicActivity> {
     public void keepCollapsedOnRotate() {
         rotateDevice(getActivity());
 
-        waitForPanelState(BottomSheetBehavior.STATE_COLLAPSED;
+        waitForPanelState(BottomSheetBehavior.STATE_COLLAPSED);
     }
 
     /**
