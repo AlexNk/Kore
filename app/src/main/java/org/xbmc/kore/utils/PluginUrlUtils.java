@@ -58,6 +58,14 @@ public class PluginUrlUtils {
                 pluginUri.appendQueryParameter("playlist_id", playlistId)
                         .appendQueryParameter("order", "default");
             }
+            if (!valid) {
+                java.util.List<String> pathSegments = playUri.getPathSegments();
+                if ((pathSegments.size() == 2) && pathSegments.get(0).equals("live")) {
+                    valid = true;
+                    videoId = pathSegments.get(1);
+                    pluginUri.appendQueryParameter("video_id", videoId);
+                }
+            }
             if (valid) {
                 return pluginUri.build().toString();
             }
