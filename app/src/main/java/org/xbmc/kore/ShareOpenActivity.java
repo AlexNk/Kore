@@ -154,9 +154,9 @@ public class ShareOpenActivity extends Activity {
                                 Toast.makeText(context, msg, Toast.LENGTH_SHORT)
                                         .show();
                                 // Don't display Kore after queueing from another app, otherwise start the remote
-                                if (!queue)
-                                    startActivity(new Intent(context, RemoteActivity.class)
-                                                  .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP));
+                                //if (!queue)
+                                //    startActivity(new Intent(context, RemoteActivity.class)
+                                //                  .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP));
                                 // Always finish as we don't have anything to show
                                 finish();
                             }
